@@ -1,0 +1,60 @@
+{
+  "name": "Machine #52 Ownership Share - 47%",
+  "description": "47% ownership stake in Claw Machine #52 located at Floor B1, Himitol Tower, Manila, Philippines. Earn proportional rewards from machine operations.",
+  "image": "https://api.clawhunters.com/metadata/nftowner/52/image.png",
+  "machineId": 52,
+  "shareBps": 4700,
+  "units": 4700,
+  "stakeEligible": true,
+  "nftClawAddress": "0xClawAddressTBD",
+  "valueUSDT": 2018,
+  "attributes": [
+    {
+      "trait_type": "Ownership Percentage",
+      "value": 47,
+      "display_type": "boost_percentage"
+    },
+    {
+      "trait_type": "Machine Location",
+      "value": "Manila"
+    },
+    {
+      "trait_type": "Machine Value",
+      "value": 2018,
+      "display_type": "number"
+    },
+    {
+      "trait_type": "Machine Mode",
+      "value": "Standard"
+    },
+    {
+      "trait_type": "Machine Rarity",
+      "value": "Epic"
+    },
+    {
+      "trait_type": "NFT Claw Address",
+      "value": "0xClawAddressTBD"
+    },
+    {
+      "trait_type": "Started Date",
+      "value": "2025-09-17",
+      "display_type": "date"
+    },
+    {
+      "trait_type": "Expired Date",
+      "value": "2030-09-17",
+      "display_type": "date"
+    },
+    {
+      "trait_type": "Machine Vendor",
+      "value": "CraneMaster Industries"
+    },
+    {
+      "trait_type": "Acquisition Date",
+      "value": "2025-09-17",
+      "display_type": "date"
+    }
+  ],
+  "external_url": "https://clawhunters.com/ownership/52",
+  "background_color": "2D5A87"
+}

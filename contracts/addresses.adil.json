@@ -1,0 +1,80 @@
+{
+  "network": {
+    "name": "AdilChain Devnet",
+    "chainId": 123456,
+    "rpc": "https://devnet.adilchain-rpc.io",
+    "explorer": "https://devnet.adilchain-scan.io"
+  },
+  "deployment": {
+    "deployer": "0x12a87E08a5885Aaf05D7663698b901B8f0DB3e40",
+    "timestamp": 1758106929,
+    "blockNumber": 26129114,
+    "totalGasUsed": "0"
+  },
+  "contracts": {
+    "CHG": {
+      "address": "0xF60d771Eab19779c32c9B6c1Ac5732b7541C8658",
+      "txHash": "0x934a3fbea2e08c20eb526149d1df296f4d7cb891f13bfe8945fb0ccdb90cc047",
+      "block": 26129117,
+      "gasUsed": "1691778",
+      "abi": "abi/CHG.json",
+      "version": "v1.0.0"
+    },
+    "NFTClaw": {
+      "address": "0x93A6A6AD4A1Bd6b395B97995E7925637eE9A0ea5",
+      "txHash": "0x27be845d6b57097b9038866ddc6a55522cfacaa827f24c9ed7f3ead5d03b6019",
+      "block": 26129119,
+      "gasUsed": "1944503",
+      "abi": "abi/NFTClaw.json",
+      "version": "v1.0.0"
+    },
+    "NFTOwner": {
+      "address": "0xd51f35416825F60901A6d46BC047C38C489cB051",
+      "txHash": "0x401dd6369b34f5f894ee1d14e51b80517df24907cad3baf24a4d4eb6c04f7a56",
+      "block": 26129121,
+      "gasUsed": "2076950",
+      "abi": "abi/NFTOwner.json",
+      "version": "v1.0.0"
+    },
+    "NFTTicket": {
+      "address": "0xaa3A0736fa52a63b015ff95cEB28E6b9d3B566d4",
+      "txHash": "0x66c6a60a4e6b2dcb486c8385c4d257c422add9b2ddfb8a8e9b2227b2c88d4e8d",
+      "block": 26129123,
+      "gasUsed": "1921767",
+      "abi": "abi/NFTTicket.json",
+      "version": "v1.0.0"
+    },
+    "RevenueSplitter": {
+      "address": "0xF13E3CE272d9d727C928EBA9561DE4F5F0D9A191",
+      "txHash": "0xa45986d4bdf673c813e894a4d331d54b6e165878a6b986c860458ac8b4a68212",
+      "block": 26129125,
+      "gasUsed": "763785",
+      "abi": "abi/RevenueSplitter.json",
+      "version": "v1.0.0"
+    },
+    "RevenuePool": {
+      "address": "0x484E14386e0801A49553fCAd7f3f754cB002bca7",
+      "txHash": "0xf5051706aa2ef6b817da671fc162639cb231c4bb847bff43a8bd8bee8d5d43d0",
+      "block": 26129127,
+      "gasUsed": "925580",
+      "abi": "abi/RevenuePool.json",
+      "version": "v1.0.0"
+    },
+    "ClaimProcessor": {
+      "address": "0x3524f02d4d1d2f260e48f7Cb95cc67604ba35d4B",
+      "txHash": "0x53ab1b1ff9835d2bae4fa5f43659eb8bd85a02168f1fb7b230ccbdb04d9e2501",
+      "block": 26129129,
+      "gasUsed": "1072062",
+      "abi": "abi/ClaimProcessor.json",
+      "version": "v1.0.0"
+    },
+    "CHGStaking": {
+      "address": "0x4DE47713E2032Ee0E6372d68f3751017259c6FeF",
+      "txHash": "0x6144cc2a4a3c3d29de0c1bffacc69e3ce66e6f8ad93ea1d4dec78e99b5e95259",
+      "block": 26129131,
+      "gasUsed": "1197501",
+      "abi": "abi/CHGStaking.json",
+      "version": "v1.0.0"
+    }
+  }
+}

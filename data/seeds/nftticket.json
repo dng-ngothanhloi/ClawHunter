@@ -1,0 +1,126 @@
+[
+  {
+    "tokenTypeId": 1,
+    "tokenType": "vip",
+    "supply": 1000,
+    "ticketType": "vip",
+    "uses": 2,
+    "expiresAt": "2025-10-31",
+    "name": "Vip Play Ticket - 2 Uses",
+    "description": "Vip play ticket providing 2 plays with enhanced features.",
+    "imageURL": "https://api.clawhunters.com/metadata/nftticket/1/image.png",
+    "attributes": [
+      {
+        "trait_type": "Token Type",
+        "value": "Vip"
+      },
+      {
+        "trait_type": "Supply",
+        "value": 1000,
+        "display_type": "number"
+      },
+      {
+        "trait_type": "Uses",
+        "value": 2,
+        "display_type": "number"
+      },
+      {
+        "trait_type": "Rarity",
+        "value": "Legendary"
+      }
+    ]
+  },
+  {
+    "tokenTypeId": 2,
+    "tokenType": "special",
+    "supply": 3000,
+    "ticketType": "special",
+    "uses": 3,
+    "expiresAt": "2026-07-26",
+    "name": "Special Play Ticket - 3 Uses",
+    "description": "Special play ticket providing 3 plays with enhanced features.",
+    "imageURL": "https://api.clawhunters.com/metadata/nftticket/2/image.png",
+    "attributes": [
+      {
+        "trait_type": "Token Type",
+        "value": "Special"
+      },
+      {
+        "trait_type": "Supply",
+        "value": 3000,
+        "display_type": "number"
+      },
+      {
+        "trait_type": "Uses",
+        "value": 3,
+        "display_type": "number"
+      },
+      {
+        "trait_type": "Rarity",
+        "value": "Epic"
+      }
+    ]
+  },
+  {
+    "tokenTypeId": 3,
+    "tokenType": "premium",
+    "supply": 6000,
+    "ticketType": "premium",
+    "uses": 9,
+    "expiresAt": "2026-06-21",
+    "name": "Premium Play Ticket - 9 Uses",
+    "description": "Premium play ticket providing 9 plays with enhanced features.",
+    "imageURL": "https://api.clawhunters.com/metadata/nftticket/3/image.png",
+    "attributes": [
+      {
+        "trait_type": "Token Type",
+        "value": "Premium"
+      },
+      {
+        "trait_type": "Supply",
+        "value": 6000,
+        "display_type": "number"
+      },
+      {
+        "trait_type": "Uses",
+        "value": 9,
+        "display_type": "number"
+      },
+      {
+        "trait_type": "Rarity",
+        "value": "Rare"
+      }
+    ]
+  },
+  {
+    "tokenTypeId": 4,
+    "tokenType": "standard",
+    "supply": 10000,
+    "ticketType": "standard",
+    "uses": 7,
+    "expiresAt": "2026-06-06",
+    "name": "Standard Play Ticket - 7 Uses",
+    "description": "Standard play ticket providing 7 plays with enhanced features.",
+    "imageURL": "https://api.clawhunters.com/metadata/nftticket/4/image.png",
+    "attributes": [
+      {
+        "trait_type": "Token Type",
+        "value": "Standard"
+      },
+      {
+        "trait_type": "Supply",
+        "value": 10000,
+        "display_type": "number"
+      },
+      {
+        "trait_type": "Uses",
+        "value": 7,
+        "display_type": "number"
+      },
+      {
+        "trait_type": "Rarity",
+        "value": "Common"
+      }
+    ]
+  }
+]

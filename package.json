@@ -1,0 +1,24 @@
+{
+  "name": "clawhunterdemo",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "apps/*",
+    "services/*",
+    "contracts"
+  ],
+  "scripts": {
+    "dev:api": "pnpm -C services/api dev",
+    "dev:web": "pnpm -C apps/web dev",
+    "dev:indexer": "pnpm -C services/indexer dev",
+    "dev:node": "pnpm -C contracts devnode",
+    "deploy:local": "pnpm -C contracts hardhat run scripts/deploy.ts --network 127.0.0.1",
+    "build:web": "pnpm -C apps/web build"
+  },
+  "packageManager": "pnpm@9.6.0",
+  "dependencies": {
+    "@types/node": "^22.0.0",
+    "ts-node": "^10.9.2",
+    "xlsx": "^0.18.5"
+  }
+}

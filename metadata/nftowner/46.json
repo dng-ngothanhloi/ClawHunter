@@ -1,0 +1,60 @@
+{
+  "name": "Machine #46 Ownership Share - 56%",
+  "description": "56% ownership stake in Claw Machine #46 located at Floor 5, WinCom Tower, Da Nang city, Viet Nam. Earn proportional rewards from machine operations.",
+  "image": "https://api.clawhunters.com/metadata/nftowner/46/image.png",
+  "machineId": 46,
+  "shareBps": 5600,
+  "units": 5600,
+  "stakeEligible": true,
+  "nftClawAddress": "0xClawAddressTBD",
+  "valueUSDT": 2649,
+  "attributes": [
+    {
+      "trait_type": "Ownership Percentage",
+      "value": 56,
+      "display_type": "boost_percentage"
+    },
+    {
+      "trait_type": "Machine Location",
+      "value": "Da Nang city"
+    },
+    {
+      "trait_type": "Machine Value",
+      "value": 2649,
+      "display_type": "number"
+    },
+    {
+      "trait_type": "Machine Mode",
+      "value": "Vip"
+    },
+    {
+      "trait_type": "Machine Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "NFT Claw Address",
+      "value": "0xClawAddressTBD"
+    },
+    {
+      "trait_type": "Started Date",
+      "value": "2025-09-17",
+      "display_type": "date"
+    },
+    {
+      "trait_type": "Expired Date",
+      "value": "2030-09-17",
+      "display_type": "date"
+    },
+    {
+      "trait_type": "Machine Vendor",
+      "value": "ClawKing Manufacturing"
+    },
+    {
+      "trait_type": "Acquisition Date",
+      "value": "2025-09-17",
+      "display_type": "date"
+    }
+  ],
+  "external_url": "https://clawhunters.com/ownership/46",
+  "background_color": "2D5A87"
+}

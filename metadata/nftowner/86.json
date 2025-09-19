@@ -1,0 +1,60 @@
+{
+  "name": "Machine #86 Ownership Share - 45%",
+  "description": "45% ownership stake in Claw Machine #86 located at Floor B1, Himitol Tower, Manila, Philippines. Earn proportional rewards from machine operations.",
+  "image": "https://api.clawhunters.com/metadata/nftowner/86/image.png",
+  "machineId": 86,
+  "shareBps": 4500,
+  "units": 4500,
+  "stakeEligible": true,
+  "nftClawAddress": "0xClawAddressTBD",
+  "valueUSDT": 2221,
+  "attributes": [
+    {
+      "trait_type": "Ownership Percentage",
+      "value": 45,
+      "display_type": "boost_percentage"
+    },
+    {
+      "trait_type": "Machine Location",
+      "value": "Manila"
+    },
+    {
+      "trait_type": "Machine Value",
+      "value": 2221,
+      "display_type": "number"
+    },
+    {
+      "trait_type": "Machine Mode",
+      "value": "Standard"
+    },
+    {
+      "trait_type": "Machine Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "NFT Claw Address",
+      "value": "0xClawAddressTBD"
+    },
+    {
+      "trait_type": "Started Date",
+      "value": "2025-09-17",
+      "display_type": "date"
+    },
+    {
+      "trait_type": "Expired Date",
+      "value": "2030-09-17",
+      "display_type": "date"
+    },
+    {
+      "trait_type": "Machine Vendor",
+      "value": "GameTech Systems"
+    },
+    {
+      "trait_type": "Acquisition Date",
+      "value": "2025-09-17",
+      "display_type": "date"
+    }
+  ],
+  "external_url": "https://clawhunters.com/ownership/86",
+  "background_color": "2D5A87"
+}

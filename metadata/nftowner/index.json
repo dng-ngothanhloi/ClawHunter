@@ -1,0 +1,702 @@
+[
+  {
+    "tokenId": 1,
+    "name": "Machine #1 Ownership Share - 64%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/1/image.png",
+    "machineId": 1,
+    "valueUSDT": 1869
+  },
+  {
+    "tokenId": 2,
+    "name": "Machine #2 Ownership Share - 98%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/2/image.png",
+    "machineId": 2,
+    "valueUSDT": 2657
+  },
+  {
+    "tokenId": 3,
+    "name": "Machine #3 Ownership Share - 132%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/3/image.png",
+    "machineId": 3,
+    "valueUSDT": 2456
+  },
+  {
+    "tokenId": 4,
+    "name": "Machine #4 Ownership Share - 138%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/4/image.png",
+    "machineId": 4,
+    "valueUSDT": 4286
+  },
+  {
+    "tokenId": 5,
+    "name": "Machine #5 Ownership Share - 102%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/5/image.png",
+    "machineId": 5,
+    "valueUSDT": 2807
+  },
+  {
+    "tokenId": 6,
+    "name": "Machine #6 Ownership Share - 103%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/6/image.png",
+    "machineId": 6,
+    "valueUSDT": 3327
+  },
+  {
+    "tokenId": 7,
+    "name": "Machine #7 Ownership Share - 109%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/7/image.png",
+    "machineId": 7,
+    "valueUSDT": 3151
+  },
+  {
+    "tokenId": 8,
+    "name": "Machine #8 Ownership Share - 33%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/8/image.png",
+    "machineId": 8,
+    "valueUSDT": 1541
+  },
+  {
+    "tokenId": 9,
+    "name": "Machine #9 Ownership Share - 111%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/9/image.png",
+    "machineId": 9,
+    "valueUSDT": 2363
+  },
+  {
+    "tokenId": 10,
+    "name": "Machine #10 Ownership Share - 96%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/10/image.png",
+    "machineId": 10,
+    "valueUSDT": 2344
+  },
+  {
+    "tokenId": 11,
+    "name": "Machine #11 Ownership Share - 46%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/11/image.png",
+    "machineId": 11,
+    "valueUSDT": 2141
+  },
+  {
+    "tokenId": 12,
+    "name": "Machine #12 Ownership Share - 85%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/12/image.png",
+    "machineId": 12,
+    "valueUSDT": 2518
+  },
+  {
+    "tokenId": 13,
+    "name": "Machine #13 Ownership Share - 60%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/13/image.png",
+    "machineId": 13,
+    "valueUSDT": 2309
+  },
+  {
+    "tokenId": 14,
+    "name": "Machine #14 Ownership Share - 106%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/14/image.png",
+    "machineId": 14,
+    "valueUSDT": 4606
+  },
+  {
+    "tokenId": 15,
+    "name": "Machine #15 Ownership Share - 40%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/15/image.png",
+    "machineId": 15,
+    "valueUSDT": 1794
+  },
+  {
+    "tokenId": 16,
+    "name": "Machine #16 Ownership Share - 81%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/16/image.png",
+    "machineId": 16,
+    "valueUSDT": 1973
+  },
+  {
+    "tokenId": 17,
+    "name": "Machine #17 Ownership Share - 77%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/17/image.png",
+    "machineId": 17,
+    "valueUSDT": 3227
+  },
+  {
+    "tokenId": 18,
+    "name": "Machine #18 Ownership Share - 215%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/18/image.png",
+    "machineId": 18,
+    "valueUSDT": 4881
+  },
+  {
+    "tokenId": 19,
+    "name": "Machine #19 Ownership Share - 101%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/19/image.png",
+    "machineId": 19,
+    "valueUSDT": 3344
+  },
+  {
+    "tokenId": 20,
+    "name": "Machine #20 Ownership Share - 57%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/20/image.png",
+    "machineId": 20,
+    "valueUSDT": 2372
+  },
+  {
+    "tokenId": 21,
+    "name": "Machine #21 Ownership Share - 174%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/21/image.png",
+    "machineId": 21,
+    "valueUSDT": 4484
+  },
+  {
+    "tokenId": 22,
+    "name": "Machine #22 Ownership Share - 70%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/22/image.png",
+    "machineId": 22,
+    "valueUSDT": 1593
+  },
+  {
+    "tokenId": 23,
+    "name": "Machine #23 Ownership Share - 122%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/23/image.png",
+    "machineId": 23,
+    "valueUSDT": 4734
+  },
+  {
+    "tokenId": 24,
+    "name": "Machine #24 Ownership Share - 101%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/24/image.png",
+    "machineId": 24,
+    "valueUSDT": 2960
+  },
+  {
+    "tokenId": 25,
+    "name": "Machine #25 Ownership Share - 38%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/25/image.png",
+    "machineId": 25,
+    "valueUSDT": 1895
+  },
+  {
+    "tokenId": 26,
+    "name": "Machine #26 Ownership Share - 33%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/26/image.png",
+    "machineId": 26,
+    "valueUSDT": 1531
+  },
+  {
+    "tokenId": 27,
+    "name": "Machine #27 Ownership Share - 89%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/27/image.png",
+    "machineId": 27,
+    "valueUSDT": 2970
+  },
+  {
+    "tokenId": 28,
+    "name": "Machine #28 Ownership Share - 51%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/28/image.png",
+    "machineId": 28,
+    "valueUSDT": 2104
+  },
+  {
+    "tokenId": 29,
+    "name": "Machine #29 Ownership Share - 100%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/29/image.png",
+    "machineId": 29,
+    "valueUSDT": 4883
+  },
+  {
+    "tokenId": 30,
+    "name": "Machine #30 Ownership Share - 127%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/30/image.png",
+    "machineId": 30,
+    "valueUSDT": 4874
+  },
+  {
+    "tokenId": 31,
+    "name": "Machine #31 Ownership Share - 59%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/31/image.png",
+    "machineId": 31,
+    "valueUSDT": 2729
+  },
+  {
+    "tokenId": 32,
+    "name": "Machine #32 Ownership Share - 125%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/32/image.png",
+    "machineId": 32,
+    "valueUSDT": 4050
+  },
+  {
+    "tokenId": 33,
+    "name": "Machine #33 Ownership Share - 153%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/33/image.png",
+    "machineId": 33,
+    "valueUSDT": 4464
+  },
+  {
+    "tokenId": 34,
+    "name": "Machine #34 Ownership Share - 123%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/34/image.png",
+    "machineId": 34,
+    "valueUSDT": 3421
+  },
+  {
+    "tokenId": 35,
+    "name": "Machine #35 Ownership Share - 71%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/35/image.png",
+    "machineId": 35,
+    "valueUSDT": 2180
+  },
+  {
+    "tokenId": 36,
+    "name": "Machine #36 Ownership Share - 93%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/36/image.png",
+    "machineId": 36,
+    "valueUSDT": 4228
+  },
+  {
+    "tokenId": 37,
+    "name": "Machine #37 Ownership Share - 103%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/37/image.png",
+    "machineId": 37,
+    "valueUSDT": 3054
+  },
+  {
+    "tokenId": 38,
+    "name": "Machine #38 Ownership Share - 137%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/38/image.png",
+    "machineId": 38,
+    "valueUSDT": 4791
+  },
+  {
+    "tokenId": 39,
+    "name": "Machine #39 Ownership Share - 74%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/39/image.png",
+    "machineId": 39,
+    "valueUSDT": 2487
+  },
+  {
+    "tokenId": 40,
+    "name": "Machine #40 Ownership Share - 83%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/40/image.png",
+    "machineId": 40,
+    "valueUSDT": 2995
+  },
+  {
+    "tokenId": 41,
+    "name": "Machine #41 Ownership Share - 132%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/41/image.png",
+    "machineId": 41,
+    "valueUSDT": 3246
+  },
+  {
+    "tokenId": 42,
+    "name": "Machine #42 Ownership Share - 61%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/42/image.png",
+    "machineId": 42,
+    "valueUSDT": 1663
+  },
+  {
+    "tokenId": 43,
+    "name": "Machine #43 Ownership Share - 70%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/43/image.png",
+    "machineId": 43,
+    "valueUSDT": 3066
+  },
+  {
+    "tokenId": 44,
+    "name": "Machine #44 Ownership Share - 107%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/44/image.png",
+    "machineId": 44,
+    "valueUSDT": 2059
+  },
+  {
+    "tokenId": 45,
+    "name": "Machine #45 Ownership Share - 134%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/45/image.png",
+    "machineId": 45,
+    "valueUSDT": 3432
+  },
+  {
+    "tokenId": 46,
+    "name": "Machine #46 Ownership Share - 56%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/46/image.png",
+    "machineId": 46,
+    "valueUSDT": 2649
+  },
+  {
+    "tokenId": 47,
+    "name": "Machine #47 Ownership Share - 199%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/47/image.png",
+    "machineId": 47,
+    "valueUSDT": 4281
+  },
+  {
+    "tokenId": 48,
+    "name": "Machine #48 Ownership Share - 145%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/48/image.png",
+    "machineId": 48,
+    "valueUSDT": 3708
+  },
+  {
+    "tokenId": 49,
+    "name": "Machine #49 Ownership Share - 95%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/49/image.png",
+    "machineId": 49,
+    "valueUSDT": 2323
+  },
+  {
+    "tokenId": 50,
+    "name": "Machine #50 Ownership Share - 72%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/50/image.png",
+    "machineId": 50,
+    "valueUSDT": 2895
+  },
+  {
+    "tokenId": 51,
+    "name": "Machine #51 Ownership Share - 84%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/51/image.png",
+    "machineId": 51,
+    "valueUSDT": 2386
+  },
+  {
+    "tokenId": 52,
+    "name": "Machine #52 Ownership Share - 47%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/52/image.png",
+    "machineId": 52,
+    "valueUSDT": 2018
+  },
+  {
+    "tokenId": 53,
+    "name": "Machine #53 Ownership Share - 97%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/53/image.png",
+    "machineId": 53,
+    "valueUSDT": 3232
+  },
+  {
+    "tokenId": 54,
+    "name": "Machine #54 Ownership Share - 298%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/54/image.png",
+    "machineId": 54,
+    "valueUSDT": 4879
+  },
+  {
+    "tokenId": 55,
+    "name": "Machine #55 Ownership Share - 69%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/55/image.png",
+    "machineId": 55,
+    "valueUSDT": 2652
+  },
+  {
+    "tokenId": 56,
+    "name": "Machine #56 Ownership Share - 59%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/56/image.png",
+    "machineId": 56,
+    "valueUSDT": 2654
+  },
+  {
+    "tokenId": 57,
+    "name": "Machine #57 Ownership Share - 49%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/57/image.png",
+    "machineId": 57,
+    "valueUSDT": 2335
+  },
+  {
+    "tokenId": 58,
+    "name": "Machine #58 Ownership Share - 105%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/58/image.png",
+    "machineId": 58,
+    "valueUSDT": 2432
+  },
+  {
+    "tokenId": 59,
+    "name": "Machine #59 Ownership Share - 100%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/59/image.png",
+    "machineId": 59,
+    "valueUSDT": 3994
+  },
+  {
+    "tokenId": 60,
+    "name": "Machine #60 Ownership Share - 145%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/60/image.png",
+    "machineId": 60,
+    "valueUSDT": 4148
+  },
+  {
+    "tokenId": 61,
+    "name": "Machine #61 Ownership Share - 117%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/61/image.png",
+    "machineId": 61,
+    "valueUSDT": 3660
+  },
+  {
+    "tokenId": 62,
+    "name": "Machine #62 Ownership Share - 53%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/62/image.png",
+    "machineId": 62,
+    "valueUSDT": 2241
+  },
+  {
+    "tokenId": 63,
+    "name": "Machine #63 Ownership Share - 53%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/63/image.png",
+    "machineId": 63,
+    "valueUSDT": 2663
+  },
+  {
+    "tokenId": 64,
+    "name": "Machine #64 Ownership Share - 80%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/64/image.png",
+    "machineId": 64,
+    "valueUSDT": 2594
+  },
+  {
+    "tokenId": 65,
+    "name": "Machine #65 Ownership Share - 265%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/65/image.png",
+    "machineId": 65,
+    "valueUSDT": 4409
+  },
+  {
+    "tokenId": 66,
+    "name": "Machine #66 Ownership Share - 57%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/66/image.png",
+    "machineId": 66,
+    "valueUSDT": 2481
+  },
+  {
+    "tokenId": 67,
+    "name": "Machine #67 Ownership Share - 146%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/67/image.png",
+    "machineId": 67,
+    "valueUSDT": 4521
+  },
+  {
+    "tokenId": 68,
+    "name": "Machine #68 Ownership Share - 44%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/68/image.png",
+    "machineId": 68,
+    "valueUSDT": 1641
+  },
+  {
+    "tokenId": 69,
+    "name": "Machine #69 Ownership Share - 234%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/69/image.png",
+    "machineId": 69,
+    "valueUSDT": 4501
+  },
+  {
+    "tokenId": 70,
+    "name": "Machine #70 Ownership Share - 123%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/70/image.png",
+    "machineId": 70,
+    "valueUSDT": 4204
+  },
+  {
+    "tokenId": 71,
+    "name": "Machine #71 Ownership Share - 82%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/71/image.png",
+    "machineId": 71,
+    "valueUSDT": 3433
+  },
+  {
+    "tokenId": 72,
+    "name": "Machine #72 Ownership Share - 60%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/72/image.png",
+    "machineId": 72,
+    "valueUSDT": 2831
+  },
+  {
+    "tokenId": 73,
+    "name": "Machine #73 Ownership Share - 104%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/73/image.png",
+    "machineId": 73,
+    "valueUSDT": 3108
+  },
+  {
+    "tokenId": 74,
+    "name": "Machine #74 Ownership Share - 42%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/74/image.png",
+    "machineId": 74,
+    "valueUSDT": 1825
+  },
+  {
+    "tokenId": 75,
+    "name": "Machine #75 Ownership Share - 87%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/75/image.png",
+    "machineId": 75,
+    "valueUSDT": 4254
+  },
+  {
+    "tokenId": 76,
+    "name": "Machine #76 Ownership Share - 126%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/76/image.png",
+    "machineId": 76,
+    "valueUSDT": 2348
+  },
+  {
+    "tokenId": 77,
+    "name": "Machine #77 Ownership Share - 85%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/77/image.png",
+    "machineId": 77,
+    "valueUSDT": 4021
+  },
+  {
+    "tokenId": 78,
+    "name": "Machine #78 Ownership Share - 125%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/78/image.png",
+    "machineId": 78,
+    "valueUSDT": 2918
+  },
+  {
+    "tokenId": 79,
+    "name": "Machine #79 Ownership Share - 93%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/79/image.png",
+    "machineId": 79,
+    "valueUSDT": 4263
+  },
+  {
+    "tokenId": 80,
+    "name": "Machine #80 Ownership Share - 279%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/80/image.png",
+    "machineId": 80,
+    "valueUSDT": 4683
+  },
+  {
+    "tokenId": 81,
+    "name": "Machine #81 Ownership Share - 240%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/81/image.png",
+    "machineId": 81,
+    "valueUSDT": 4561
+  },
+  {
+    "tokenId": 82,
+    "name": "Machine #82 Ownership Share - 55%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/82/image.png",
+    "machineId": 82,
+    "valueUSDT": 1615
+  },
+  {
+    "tokenId": 83,
+    "name": "Machine #83 Ownership Share - 129%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/83/image.png",
+    "machineId": 83,
+    "valueUSDT": 2641
+  },
+  {
+    "tokenId": 84,
+    "name": "Machine #84 Ownership Share - 135%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/84/image.png",
+    "machineId": 84,
+    "valueUSDT": 3712
+  },
+  {
+    "tokenId": 85,
+    "name": "Machine #85 Ownership Share - 151%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/85/image.png",
+    "machineId": 85,
+    "valueUSDT": 4257
+  },
+  {
+    "tokenId": 86,
+    "name": "Machine #86 Ownership Share - 45%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/86/image.png",
+    "machineId": 86,
+    "valueUSDT": 2221
+  },
+  {
+    "tokenId": 87,
+    "name": "Machine #87 Ownership Share - 88%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/87/image.png",
+    "machineId": 87,
+    "valueUSDT": 2795
+  },
+  {
+    "tokenId": 88,
+    "name": "Machine #88 Ownership Share - 81%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/88/image.png",
+    "machineId": 88,
+    "valueUSDT": 3661
+  },
+  {
+    "tokenId": 89,
+    "name": "Machine #89 Ownership Share - 56%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/89/image.png",
+    "machineId": 89,
+    "valueUSDT": 1943
+  },
+  {
+    "tokenId": 90,
+    "name": "Machine #90 Ownership Share - 60%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/90/image.png",
+    "machineId": 90,
+    "valueUSDT": 2021
+  },
+  {
+    "tokenId": 91,
+    "name": "Machine #91 Ownership Share - 86%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/91/image.png",
+    "machineId": 91,
+    "valueUSDT": 4099
+  },
+  {
+    "tokenId": 92,
+    "name": "Machine #92 Ownership Share - 227%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/92/image.png",
+    "machineId": 92,
+    "valueUSDT": 3888
+  },
+  {
+    "tokenId": 93,
+    "name": "Machine #93 Ownership Share - 87%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/93/image.png",
+    "machineId": 93,
+    "valueUSDT": 2388
+  },
+  {
+    "tokenId": 94,
+    "name": "Machine #94 Ownership Share - 87%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/94/image.png",
+    "machineId": 94,
+    "valueUSDT": 4183
+  },
+  {
+    "tokenId": 95,
+    "name": "Machine #95 Ownership Share - 95%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/95/image.png",
+    "machineId": 95,
+    "valueUSDT": 4206
+  },
+  {
+    "tokenId": 96,
+    "name": "Machine #96 Ownership Share - 99%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/96/image.png",
+    "machineId": 96,
+    "valueUSDT": 3025
+  },
+  {
+    "tokenId": 97,
+    "name": "Machine #97 Ownership Share - 188%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/97/image.png",
+    "machineId": 97,
+    "valueUSDT": 4607
+  },
+  {
+    "tokenId": 98,
+    "name": "Machine #98 Ownership Share - 54%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/98/image.png",
+    "machineId": 98,
+    "valueUSDT": 1904
+  },
+  {
+    "tokenId": 99,
+    "name": "Machine #99 Ownership Share - 74%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/99/image.png",
+    "machineId": 99,
+    "valueUSDT": 3654
+  },
+  {
+    "tokenId": 100,
+    "name": "Machine #100 Ownership Share - 115%",
+    "image": "https://api.clawhunters.com/metadata/nftowner/100/image.png",
+    "machineId": 100,
+    "valueUSDT": 2721
+  }
+]

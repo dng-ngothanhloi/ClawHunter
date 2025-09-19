@@ -1,0 +1,205 @@
+version: '3.8'
+
+services:
+  # Database Layer
+  postgres:
+    image: postgres:15-alpine
+    container_name: clawhunters-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: clawhunters
+      POSTGRES_USER: ${DB_USER:-clawhunters}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-clawhunters123}
+      POSTGRES_INITDB_ARGS: "--auth-host=scram-sha-256"
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./db/init:/docker-entrypoint-initdb.d
+    networks:
+      - clawhunters-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-clawhunters} -d clawhunters"]
+      timeout: 20s
+      retries: 10
+
+  # API Service (M4)
+  api:
+    build:
+      context: ./services/api
+      dockerfile: Dockerfile
+    container_name: clawhunters-api
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://${DB_USER:-clawhunters}:${DB_PASSWORD:-clawhunters123}@postgres:5432/clawhunters?schema=public
+      ADL_RPC_URL: https://devnet.adilchain-rpc.io
+      CONTRACT_ADDRESSES_FILE: /app/addresses.adil.json
+      JWT_SECRET: ${JWT_SECRET:-dev-jwt-secret}
+      NODE_ENV: ${NODE_ENV:-development}
+      API_PORT: 3000
+      CORS_ORIGIN: ${CORS_ORIGIN:-http://127.0.0.1:5173}
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./contracts/addresses.adil.json:/app/addresses.adil.json:ro
+      - ./contracts/typechain-types:/app/typechain-types:ro
+    networks:
+      - clawhunters-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:3000/api/v1/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Event Indexer (M3)
+  indexer:
+    build:
+      context: ./services/indexer
+      dockerfile: Dockerfile
+    container_name: clawhunters-indexer
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      api:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://${DB_USER:-clawhunters}:${DB_PASSWORD:-clawhunters123}@postgres:5432/clawhunters?schema=public
+      ADL_RPC_URL: https://devnet.adilchain-rpc.io
+      CONTRACT_ADDRESSES_FILE: /app/addresses.adil.json
+      INDEXER_POLL_INTERVAL: ${INDEXER_POLL_INTERVAL:-5000}
+      INDEXER_BATCH_SIZE: ${INDEXER_BATCH_SIZE:-100}
+      NODE_ENV: ${NODE_ENV:-development}
+    volumes:
+      - ./contracts/addresses.adil.json:/app/addresses.adil.json:ro
+      - ./contracts/typechain-types:/app/typechain-types:ro
+    networks:
+      - clawhunters-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:3001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Web Frontend (M5)
+  web:
+    build:
+      context: ./apps/web
+      dockerfile: Dockerfile
+      args:
+        VITE_API_URL: ${VITE_API_URL:-http://127.0.0.1:3000}
+        VITE_NETWORK_NAME: AdilChain Devnet
+        VITE_RPC_URL: https://devnet.adilchain-rpc.io
+        VITE_EXPLORER_URL: https://devnet.adilchain-scan.io
+        VITE_CHAIN_ID: 123456
+    container_name: clawhunters-web
+    restart: unless-stopped
+    depends_on:
+      api:
+        condition: service_healthy
+    ports:
+      - "5173:80"
+    networks:
+      - clawhunters-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:80/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Redis Cache (Optional)
+  redis:
+    image: redis:7-alpine
+    container_name: clawhunters-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - clawhunters-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Monitoring (Optional)
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: clawhunters-prometheus
+    restart: unless-stopped
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    networks:
+      - clawhunters-network
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: clawhunters-grafana
+    restart: unless-stopped
+    ports:
+      - "3001:3000"
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_PASSWORD:-admin}
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./monitoring/grafana/dashboards:/etc/grafana/provisioning/dashboards:ro
+    networks:
+      - clawhunters-network
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+  prometheus_data:
+    driver: local
+  grafana_data:
+    driver: local
+
+networks:
+  clawhunters-network:
+    driver: bridge
+    name: clawhunters-network
+
+# Development override
+# Use: docker-compose -f docker-compose.yml -f docker-compose.dev.yml up
+---
+# docker-compose.dev.yml
+version: '3.8'
+
+services:
+  api:
+    volumes:
+      - ./services/api/src:/app/src:ro
+    environment:
+      NODE_ENV: development
+      LOG_LEVEL: debug
+    command: npm run start:dev
+
+  indexer:
+    volumes:
+      - ./services/indexer/src:/app/src:ro
+    environment:
+      NODE_ENV: development
+      LOG_LEVEL: debug
+    command: npm run start:dev
+
+  web:
+    volumes:
+      - ./apps/web/src:/app/src:ro
+    environment:
+      NODE_ENV: development
+    command: npm run dev -- --host 0.0.0.0

@@ -1,0 +1,320 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider          = "postgresql"
+  url               = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+
+// Indexer state and checkpoints
+model IndexerCheckpoint {
+  id                String   @id @default(uuid())
+  contractName      String   @unique
+  lastProcessedBlock BigInt
+  lastProcessedTx   String?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@map("indexer_checkpoints")
+}
+
+// Revenue epochs and distributions
+model RevenueEpoch {
+  epochId    BigInt    @id
+  totalR     Decimal   @db.Decimal(20, 6) // Total revenue in USDT (6 decimals)
+  alpha      Decimal   @db.Decimal(20, 6) // CHG Staking pool (20%)
+  beta       Decimal   @db.Decimal(20, 6) // NFTClaw L1 pool (3%)
+  gamma      Decimal   @db.Decimal(20, 6) // NFTOwner L2 pool (3%)
+  delta      Decimal   @db.Decimal(20, 6) // Reward pool (4%)
+  opc        Decimal   @db.Decimal(20, 6) // OPC pool (70% + remainder)
+  blockNumber BigInt
+  blockTime   DateTime
+  txHash      String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  machineRevenues     MachineRevenue[]
+  ownerShareSnapshots OwnerShareSnapshot[]
+  stakingSnapshots    StakingSnapshot[]
+  merkleRoots         MerkleRoot[]
+  merkleLeaves        MerkleLeaf[]
+
+  @@map("revenue_epochs")
+}
+
+// Per-machine revenue breakdown
+model MachineRevenue {
+  id          String       @id @default(uuid())
+  epochId     BigInt
+  machineId   BigInt
+  Rm          Decimal      @db.Decimal(20, 6) // Machine-specific revenue
+  blockNumber BigInt
+  txHash      String
+  createdAt   DateTime     @default(now())
+  
+  // Relations
+  epoch       RevenueEpoch @relation(fields: [epochId], references: [epochId], onDelete: Cascade)
+
+  @@unique([epochId, machineId])
+  @@map("machine_revenues")
+}
+
+// NFTOwner share snapshots per epoch
+model OwnerShareSnapshot {
+  id             String       @id @default(uuid())
+  epochId        BigInt
+  account        String       // Owner address
+  machineId      BigInt
+  shareBps       Int          // Basis points (1-10000)
+  effectiveShare Decimal      @db.Decimal(20, 6) // Calculated share amount
+  createdAt      DateTime     @default(now())
+  
+  // Relations
+  epoch          RevenueEpoch @relation(fields: [epochId], references: [epochId], onDelete: Cascade)
+
+  @@unique([epochId, account, machineId])
+  @@map("owner_share_snapshots")
+}
+
+// CHG staking snapshots per epoch
+model StakingSnapshot {
+  id              String       @id @default(uuid())
+  epochId         BigInt
+  account         String       // Staker address
+  amount          Decimal      @db.Decimal(20, 18) // Staked CHG amount (18 decimals)
+  weight          Int          // Lock duration weight multiplier
+  effectiveWeight Decimal      @db.Decimal(20, 18) // amount * weight
+  lockUntil       DateTime?    // Lock expiration
+  createdAt       DateTime     @default(now())
+  
+  // Relations
+  epoch           RevenueEpoch @relation(fields: [epochId], references: [epochId], onDelete: Cascade)
+
+  @@unique([epochId, account])
+  @@map("staking_snapshots")
+}
+
+// Merkle tree roots per epoch and group
+model MerkleRoot {
+  id          String       @id @default(uuid())
+  epochId     BigInt
+  group       String       // 'A' (alpha), 'B' (beta), 'G' (gamma)
+  root        String       // Merkle root hash
+  total       Decimal      @db.Decimal(20, 6) // Total amount for this group
+  leafCount   Int          // Number of leaves in tree
+  treeCid     String?      // IPFS CID if tree is stored off-chain
+  published   Boolean      @default(false) // Whether root has been published on-chain
+  publishedTx String?      // Transaction hash of on-chain publication
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  
+  // Relations
+  epoch       RevenueEpoch @relation(fields: [epochId], references: [epochId], onDelete: Cascade)
+  leaves      MerkleLeaf[]
+
+  @@unique([epochId, group])
+  @@map("merkle_roots")
+}
+
+// Individual Merkle tree leaves (claims)
+model MerkleLeaf {
+  id          String       @id @default(uuid())
+  epochId     BigInt
+  group       String       // 'A' (alpha), 'B' (beta), 'G' (gamma)
+  account     String       // Claimant address
+  amount      Decimal      @db.Decimal(20, 6) // Claimable amount
+  leafHash    String       // Hash of the leaf data
+  proof       Json         // Merkle proof array
+  claimed     Boolean      @default(false) // Whether this leaf has been claimed
+  claimedTx   String?      // Transaction hash of claim
+  claimedAt   DateTime?    // When the claim was made
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  
+  // Relations
+  epoch       RevenueEpoch @relation(fields: [epochId], references: [epochId], onDelete: Cascade)
+  merkleRoot  MerkleRoot   @relation(fields: [epochId, group], references: [epochId, group], onDelete: Cascade)
+
+  @@unique([epochId, group, account])
+  @@map("merkle_leaves")
+}
+
+// Claw Machine Model - Machine lifecycle management
+model ClawMachine {
+  id            String      @id @default(uuid())
+  machineId     BigInt      @unique
+  status        String      // ACTIVE, EXPIRED, BROKEN, DECOMMISSIONED
+  deployedAt    DateTime
+  expiresAt     DateTime?
+  location      String?
+  lastRevenueEpoch BigInt?
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+
+  @@map("claw_machines")
+}
+
+// NFT Owner Token Model - Fractional machine ownership
+model NFTOwnerToken {
+  id                String      @id @default(uuid())
+  tokenId           BigInt      @unique
+  machineId         BigInt
+  shareBasisPoints  Int         // 1-10000 (ownership percentage)
+  totalSupply       BigInt      // Total token supply
+  expiresAt         DateTime?
+  burned            Boolean     @default(false)
+  createdAt         DateTime    @default(now())
+  updatedAt         DateTime    @updatedAt
+
+  @@unique([machineId, tokenId])
+  @@map("nft_owner_tokens")
+}
+
+// NFT Owner Holding Model - End-of-day snapshots
+model NFTOwnerHolding {
+  id              String      @id @default(uuid())
+  holderAddress   String      // Owner address
+  tokenId         BigInt
+  unitsHeld       BigInt      // Number of tokens held
+  snapshotEpoch   BigInt      // Epoch when snapshot was taken
+  stakedInPool    Boolean     @default(false) // Whether staked in reward pool
+  createdAt       DateTime    @default(now())
+
+  @@unique([holderAddress, tokenId, snapshotEpoch])
+  @@index([snapshotEpoch])
+  @@index([holderAddress])
+  @@map("nft_owner_holdings")
+}
+
+// Staking Position Model - CHG staking with lock weights
+model StakingPosition {
+  id                  String      @id @default(uuid())
+  positionId          BigInt      @unique
+  stakerAddress       String      // Staker address
+  stakedAmount        Decimal     @db.Decimal(20, 18) // Staked CHG amount
+  lockDurationDays    Int         // Lock duration in days
+  lockWeight          Int         // Weight multiplier in basis points
+  startTimestamp      DateTime
+  unlockTimestamp     DateTime
+  active              Boolean     @default(true)
+  investorProgram     Boolean     @default(false) // ≥3 years lock
+  createdAt           DateTime    @default(now())
+  updatedAt           DateTime    @updatedAt
+
+  @@index([stakerAddress])
+  @@index([active])
+  @@map("staking_positions")
+}
+
+// Claimable Reward Model - Double-claim prevention
+model ClaimableReward {
+  id                  String      @id @default(uuid())
+  beneficiaryAddress  String      // Claimant address
+  epochId             BigInt
+  rewardGroup         String      // STAKING_CHG, NFTCLAW_L1, NFTOWNER_L2
+  claimableAmount     Decimal     @db.Decimal(20, 6) // Claimable amount
+  sourceTokenId       BigInt?     // For NFT-based rewards
+  sourceMachineId     BigInt?     // For machine-based rewards
+  calculatedAt        DateTime
+  claimed             Boolean     @default(false)
+  createdAt           DateTime    @default(now())
+  updatedAt           DateTime    @updatedAt
+
+  @@unique([beneficiaryAddress, epochId, rewardGroup, sourceTokenId, sourceMachineId])
+  @@index([beneficiaryAddress])
+  @@index([epochId])
+  @@index([rewardGroup])
+  @@map("claimable_rewards")
+}
+
+// Claimed Reward Model - Audit trail for successful claims
+model ClaimedReward {
+  id                  String      @id @default(uuid())
+  claimableRewardId   String      @unique // Reference to claimable reward
+  beneficiaryAddress  String
+  epochId             BigInt
+  rewardGroup         String
+  claimedAmount       Decimal     @db.Decimal(20, 6)
+  txHash              String      // Blockchain transaction hash
+  gasUsed             BigInt?     // Gas consumed
+  gasPrice            BigInt?     // Gas price
+  claimedAt           DateTime
+  createdAt           DateTime    @default(now())
+
+  @@index([beneficiaryAddress])
+  @@index([epochId])
+  @@index([txHash])
+  @@map("claimed_rewards")
+}
+
+// Oracle Batch Model - Oracle posting integrity
+model OracleBatch {
+  id                  String      @id @default(uuid())
+  batchId             String      @unique
+  epochId             BigInt
+  oracleAddress       String
+  signature           String      // ECDSA signature
+  merkleRoot          String      // Merkle root hash
+  machineRevenues     Json        // Array of machine revenue data
+  blockNumber         BigInt
+  blockTimestamp      DateTime
+  verified            Boolean     @default(false)
+  verificationError   String?
+  createdAt           DateTime    @default(now())
+  updatedAt           DateTime    @updatedAt
+
+  @@index([epochId])
+  @@index([oracleAddress])
+  @@index([verified])
+  @@map("oracle_batches")
+}
+
+// Reward Pool Usage Model - δ pool accounting
+model RewardPoolUsage {
+  id                  String      @id @default(uuid())
+  usageId             String      @unique
+  epochId             BigInt
+  poolType            String      // DELTA, ALPHA, BETA, GAMMA
+  usedAmount          Decimal     @db.Decimal(20, 6)
+  carryoverAmount     Decimal     @db.Decimal(20, 6)
+  allocatedAmount     Decimal     @db.Decimal(20, 6)
+  previousCarryover   Decimal     @db.Decimal(20, 6)
+  usageDescription    String
+  usageCategory       String      // IN_GAME_REWARDS, TOURNAMENT_PRIZES, etc.
+  usedAt              DateTime
+  blockNumber         BigInt?
+  txHash              String?
+  createdAt           DateTime    @default(now())
+
+  @@index([epochId])
+  @@index([poolType])
+  @@index([usageCategory])
+  @@map("reward_pool_usage")
+}
+
+// Event processing logs
+model EventLog {
+  id            String   @id @default(uuid())
+  contractName  String
+  eventName     String
+  blockNumber   BigInt
+  txHash        String
+  logIndex      Int
+  processed     Boolean  @default(false)
+  data          Json     // Raw event data
+  error         String?  // Error message if processing failed
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@unique([txHash, logIndex])
+  @@index([contractName, eventName])
+  @@index([blockNumber])
+  @@index([processed])
+  @@map("event_logs")
+}

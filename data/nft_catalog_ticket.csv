@@ -1,0 +1,5 @@
+﻿tokenId;ticketType;uses;expiresAt;name;description;imageURL
+1;standard;1;5/5/27;Standard Play Ticket - 1 Uses;Standard play ticket providing 1 plays with enhanced features.;https://pink-persistent-turkey-880.mypinata.cloud/ipfs/bafybeifa4k5zc4nqjj6nf5ffakfyoioi2p2famjg67762fi7ct7zsfyqdy/ClawTicketNormal.jpg
+2;special;3;5/5/27;Special Play Ticket - 3 Uses;Special play ticket providing 3 plays with enhanced features.;https://pink-persistent-turkey-880.mypinata.cloud/ipfs/bafybeifa4k5zc4nqjj6nf5ffakfyoioi2p2famjg67762fi7ct7zsfyqdy/ClawTicketSpecial.jpg
+3;premium;5;5/5/27;Premium Play Ticket - 5 Uses;Premium  play ticket providing 5 plays with enhanced features.;https://pink-persistent-turkey-880.mypinata.cloud/ipfs/bafybeifa4k5zc4nqjj6nf5ffakfyoioi2p2famjg67762fi7ct7zsfyqdy/ClawTicketPremium.jpg
+4;vip;10;5/5/27;Vip Play Ticket - 10 Uses;Vip play ticket providing 10 plays with enhanced features.;https://pink-persistent-turkey-880.mypinata.cloud/ipfs/bafybeifa4k5zc4nqjj6nf5ffakfyoioi2p2famjg67762fi7ct7zsfyqdy/ClawTicketVIP.jpg

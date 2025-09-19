@@ -1,0 +1,468 @@
+openapi: 3.0.3
+info:
+  title: Claw Hunters Revenue Sharing API
+  description: |
+    REST API for the Claw Hunters GameFi revenue sharing system.
+    
+    Provides endpoints for:
+    - Revenue epoch data and distributions
+    - Machine revenue breakdowns
+    - NFT owner share information
+    - CHG staking positions
+    - Claim preparation and proof generation
+    
+    **Revenue Distribution**: 70% OPC, 20% α (CHG Staking), 3% β (NFTClaw L1), 3% γ (NFTOwner L2), 4% δ (Reward Pool)
+    
+    **Claims**: Merkle proof-based claiming system with double-claim prevention
+  version: 1.0.0
+  contact:
+    name: Claw Hunters Team
+    url: https://clawhunters.com
+  license:
+    name: MIT
+servers:
+  - url: http://localhost:4000
+    description: Local development server
+  - url: https://api.clawhunters.com
+    description: Production server
+
+paths:
+  /healthz:
+    get:
+      summary: Health check endpoint
+      description: Returns API health status
+      tags: [Health]
+      responses:
+        '200':
+          description: API is healthy
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "healthy"
+                  timestamp:
+                    type: string
+                    format: date-time
+                  version:
+                    type: string
+                    example: "1.0.0"
+
+  /readyz:
+    get:
+      summary: Readiness check endpoint
+      description: Returns API readiness status (database connectivity)
+      tags: [Health]
+      responses:
+        '200':
+          description: API is ready
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "ready"
+                  database:
+                    type: string
+                    example: "connected"
+                  blockchain:
+                    type: string
+                    example: "connected"
+
+  /revenue/epoch/{id}:
+    get:
+      summary: Get revenue epoch details
+      description: Returns complete revenue distribution for a specific epoch
+      tags: [Revenue]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Epoch ID
+          schema:
+            type: integer
+            format: int64
+            minimum: 0
+      responses:
+        '200':
+          description: Epoch details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RevenueEpoch'
+        '404':
+          description: Epoch not found
+
+  /machine/{id}/revenue:
+    get:
+      summary: Get machine revenue history
+      description: Returns revenue history for a specific machine
+      tags: [Machines]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Machine ID
+          schema:
+            type: integer
+            format: int64
+            minimum: 1
+        - name: from
+          in: query
+          description: Start epoch (inclusive)
+          schema:
+            type: integer
+            format: int64
+        - name: to
+          in: query
+          description: End epoch (inclusive)
+          schema:
+            type: integer
+            format: int64
+        - name: limit
+          in: query
+          description: Maximum number of records
+          schema:
+            type: integer
+            default: 50
+            maximum: 1000
+      responses:
+        '200':
+          description: Machine revenue history
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  machineId:
+                    type: integer
+                    format: int64
+                  revenues:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/MachineRevenue'
+                  pagination:
+                    $ref: '#/components/schemas/Pagination'
+
+  /nftowner/{addr}/shares:
+    get:
+      summary: Get NFT owner share information
+      description: Returns ownership shares and reward eligibility for an address
+      tags: [NFT Owners]
+      parameters:
+        - name: addr
+          in: path
+          required: true
+          description: Owner wallet address
+          schema:
+            type: string
+            pattern: '^0x[a-fA-F0-9]{40}$'
+        - name: epoch
+          in: query
+          description: Specific epoch (default: latest)
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: Owner share information
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  address:
+                    type: string
+                  epochId:
+                    type: integer
+                    format: int64
+                  shares:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/OwnerShare'
+                  totalEffectiveShare:
+                    type: number
+                    format: decimal
+
+  /staking/{addr}/positions:
+    get:
+      summary: Get CHG staking positions
+      description: Returns staking positions and reward weights for an address
+      tags: [Staking]
+      parameters:
+        - name: addr
+          in: path
+          required: true
+          description: Staker wallet address
+          schema:
+            type: string
+            pattern: '^0x[a-fA-F0-9]{40}$'
+        - name: epoch
+          in: query
+          description: Specific epoch (default: latest)
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: Staking position information
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  address:
+                    type: string
+                  epochId:
+                    type: integer
+                    format: int64
+                  positions:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/StakingPosition'
+                  totalEffectiveWeight:
+                    type: string
+                    description: Total weighted staking amount
+
+  /claims/{addr}:
+    get:
+      summary: Get pending claims for address
+      description: Returns all pending claims across all groups (α, β, γ)
+      tags: [Claims]
+      parameters:
+        - name: addr
+          in: path
+          required: true
+          description: Claimant wallet address
+          schema:
+            type: string
+            pattern: '^0x[a-fA-F0-9]{40}$'
+        - name: group
+          in: query
+          description: Filter by reward group
+          schema:
+            type: string
+            enum: [A, B, G]
+        - name: claimed
+          in: query
+          description: Include claimed rewards
+          schema:
+            type: boolean
+            default: false
+      responses:
+        '200':
+          description: Pending claims
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  address:
+                    type: string
+                  claims:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ClaimInfo'
+                  totalClaimable:
+                    type: string
+                    description: Total claimable amount in USDT
+
+  /claims/prepare:
+    post:
+      summary: Prepare claims for an epoch (Admin)
+      description: Materializes Merkle leaves and proofs for claiming
+      tags: [Claims]
+      security:
+        - AdminAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                epochId:
+                  type: integer
+                  format: int64
+                  description: Epoch to prepare claims for
+                groups:
+                  type: array
+                  items:
+                    type: string
+                    enum: [A, B, G]
+                  description: Groups to prepare (default: all)
+              required: [epochId]
+      responses:
+        '200':
+          description: Claims prepared successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  epochId:
+                    type: integer
+                    format: int64
+                  prepared:
+                    type: object
+                    properties:
+                      A:
+                        type: integer
+                        description: Number of alpha claims prepared
+                      B:
+                        type: integer
+                        description: Number of beta claims prepared
+                      G:
+                        type: integer
+                        description: Number of gamma claims prepared
+
+components:
+  schemas:
+    RevenueEpoch:
+      type: object
+      properties:
+        epochId:
+          type: integer
+          format: int64
+        totalR:
+          type: string
+          description: Total revenue in USDT
+        alpha:
+          type: string
+          description: CHG Staking pool allocation (20%)
+        beta:
+          type: string
+          description: NFTClaw L1 pool allocation (3%)
+        gamma:
+          type: string
+          description: NFTOwner L2 pool allocation (3%)
+        delta:
+          type: string
+          description: Reward pool allocation (4%)
+        opc:
+          type: string
+          description: OPC allocation (70% + remainder)
+        blockNumber:
+          type: integer
+          format: int64
+        blockTime:
+          type: string
+          format: date-time
+        txHash:
+          type: string
+
+    MachineRevenue:
+      type: object
+      properties:
+        epochId:
+          type: integer
+          format: int64
+        machineId:
+          type: integer
+          format: int64
+        Rm:
+          type: string
+          description: Machine-specific revenue in USDT
+        txHash:
+          type: string
+        blockNumber:
+          type: integer
+          format: int64
+
+    OwnerShare:
+      type: object
+      properties:
+        machineId:
+          type: integer
+          format: int64
+        shareBps:
+          type: integer
+          description: Share in basis points (1-10000)
+        effectiveShare:
+          type: string
+          description: Calculated share amount
+
+    StakingPosition:
+      type: object
+      properties:
+        amount:
+          type: string
+          description: Staked CHG amount
+        weight:
+          type: integer
+          description: Lock duration weight multiplier
+        effectiveWeight:
+          type: string
+          description: amount * weight
+        lockUntil:
+          type: string
+          format: date-time
+          nullable: true
+
+    ClaimInfo:
+      type: object
+      properties:
+        epochId:
+          type: integer
+          format: int64
+        group:
+          type: string
+          enum: [A, B, G]
+        amount:
+          type: string
+          description: Claimable amount in USDT
+        leafHash:
+          type: string
+        proof:
+          type: array
+          items:
+            type: string
+          description: Merkle proof for claiming
+        claimed:
+          type: boolean
+        claimedTx:
+          type: string
+          nullable: true
+        claimedAt:
+          type: string
+          format: date-time
+          nullable: true
+
+    Pagination:
+      type: object
+      properties:
+        page:
+          type: integer
+        limit:
+          type: integer
+        total:
+          type: integer
+        hasNext:
+          type: boolean
+        hasPrev:
+          type: boolean
+
+  securitySchemes:
+    AdminAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Admin JWT token for protected endpoints
+
+tags:
+  - name: Health
+    description: Health and readiness checks
+  - name: Revenue
+    description: Revenue epoch and distribution data
+  - name: Machines
+    description: Machine-specific revenue information
+  - name: NFT Owners
+    description: NFT ownership and share information
+  - name: Staking
+    description: CHG staking positions and rewards
+  - name: Claims
+    description: Claim preparation and proof generation

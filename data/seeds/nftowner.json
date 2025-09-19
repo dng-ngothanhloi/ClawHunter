@@ -1,0 +1,802 @@
+[
+  {
+    "tokenId": 1,
+    "nftClawTokenId": 1,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 1972,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/1/image.png",
+    "name": "Machine #1 Ownership Share - 18%"
+  },
+  {
+    "tokenId": 2,
+    "nftClawTokenId": 2,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 3071,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/2/image.png",
+    "name": "Machine #2 Ownership Share - 14%"
+  },
+  {
+    "tokenId": 3,
+    "nftClawTokenId": 3,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 4857,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/3/image.png",
+    "name": "Machine #3 Ownership Share - 9%"
+  },
+  {
+    "tokenId": 4,
+    "nftClawTokenId": 4,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 3648,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/4/image.png",
+    "name": "Machine #4 Ownership Share - 15%"
+  },
+  {
+    "tokenId": 5,
+    "nftClawTokenId": 5,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 1731,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/5/image.png",
+    "name": "Machine #5 Ownership Share - 11%"
+  },
+  {
+    "tokenId": 6,
+    "nftClawTokenId": 6,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 1674,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/6/image.png",
+    "name": "Machine #6 Ownership Share - 17%"
+  },
+  {
+    "tokenId": 7,
+    "nftClawTokenId": 7,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 3097,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/7/image.png",
+    "name": "Machine #7 Ownership Share - 7%"
+  },
+  {
+    "tokenId": 8,
+    "nftClawTokenId": 8,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 4908,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/8/image.png",
+    "name": "Machine #8 Ownership Share - 12%"
+  },
+  {
+    "tokenId": 9,
+    "nftClawTokenId": 9,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 4217,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/9/image.png",
+    "name": "Machine #9 Ownership Share - 13%"
+  },
+  {
+    "tokenId": 10,
+    "nftClawTokenId": 10,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 4784,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/10/image.png",
+    "name": "Machine #10 Ownership Share - 18%"
+  },
+  {
+    "tokenId": 11,
+    "nftClawTokenId": 11,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 1589,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/11/image.png",
+    "name": "Machine #11 Ownership Share - 20%"
+  },
+  {
+    "tokenId": 12,
+    "nftClawTokenId": 12,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 1527,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/12/image.png",
+    "name": "Machine #12 Ownership Share - 15%"
+  },
+  {
+    "tokenId": 13,
+    "nftClawTokenId": 13,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 4134,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/13/image.png",
+    "name": "Machine #13 Ownership Share - 12%"
+  },
+  {
+    "tokenId": 14,
+    "nftClawTokenId": 14,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 2100,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/14/image.png",
+    "name": "Machine #14 Ownership Share - 24%"
+  },
+  {
+    "tokenId": 15,
+    "nftClawTokenId": 15,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 4738,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/15/image.png",
+    "name": "Machine #15 Ownership Share - 6%"
+  },
+  {
+    "tokenId": 16,
+    "nftClawTokenId": 16,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 2568,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/16/image.png",
+    "name": "Machine #16 Ownership Share - 7%"
+  },
+  {
+    "tokenId": 17,
+    "nftClawTokenId": 17,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 3834,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/17/image.png",
+    "name": "Machine #17 Ownership Share - 20%"
+  },
+  {
+    "tokenId": 18,
+    "nftClawTokenId": 18,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 3422,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/18/image.png",
+    "name": "Machine #18 Ownership Share - 22%"
+  },
+  {
+    "tokenId": 19,
+    "nftClawTokenId": 19,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 4513,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/19/image.png",
+    "name": "Machine #19 Ownership Share - 14%"
+  },
+  {
+    "tokenId": 20,
+    "nftClawTokenId": 20,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 3302,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/20/image.png",
+    "name": "Machine #20 Ownership Share - 6%"
+  },
+  {
+    "tokenId": 21,
+    "nftClawTokenId": 21,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 1645,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/21/image.png",
+    "name": "Machine #21 Ownership Share - 21%"
+  },
+  {
+    "tokenId": 22,
+    "nftClawTokenId": 22,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 1595,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/22/image.png",
+    "name": "Machine #22 Ownership Share - 14%"
+  },
+  {
+    "tokenId": 23,
+    "nftClawTokenId": 23,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 3712,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/23/image.png",
+    "name": "Machine #23 Ownership Share - 11%"
+  },
+  {
+    "tokenId": 24,
+    "nftClawTokenId": 24,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 3997,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/24/image.png",
+    "name": "Machine #24 Ownership Share - 7%"
+  },
+  {
+    "tokenId": 25,
+    "nftClawTokenId": 25,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 3850,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/25/image.png",
+    "name": "Machine #25 Ownership Share - 23%"
+  },
+  {
+    "tokenId": 26,
+    "nftClawTokenId": 26,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 1692,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/26/image.png",
+    "name": "Machine #26 Ownership Share - 21%"
+  },
+  {
+    "tokenId": 27,
+    "nftClawTokenId": 27,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 2686,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/27/image.png",
+    "name": "Machine #27 Ownership Share - 18%"
+  },
+  {
+    "tokenId": 28,
+    "nftClawTokenId": 28,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 2957,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/28/image.png",
+    "name": "Machine #28 Ownership Share - 13%"
+  },
+  {
+    "tokenId": 29,
+    "nftClawTokenId": 29,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 2841,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/29/image.png",
+    "name": "Machine #29 Ownership Share - 25%"
+  },
+  {
+    "tokenId": 30,
+    "nftClawTokenId": 30,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 4528,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/30/image.png",
+    "name": "Machine #30 Ownership Share - 23%"
+  },
+  {
+    "tokenId": 31,
+    "nftClawTokenId": 31,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 2800,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/31/image.png",
+    "name": "Machine #31 Ownership Share - 19%"
+  },
+  {
+    "tokenId": 32,
+    "nftClawTokenId": 32,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 4159,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/32/image.png",
+    "name": "Machine #32 Ownership Share - 7%"
+  },
+  {
+    "tokenId": 33,
+    "nftClawTokenId": 33,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 3212,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/33/image.png",
+    "name": "Machine #33 Ownership Share - 8%"
+  },
+  {
+    "tokenId": 34,
+    "nftClawTokenId": 34,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 2250,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/34/image.png",
+    "name": "Machine #34 Ownership Share - 23%"
+  },
+  {
+    "tokenId": 35,
+    "nftClawTokenId": 35,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 4681,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/35/image.png",
+    "name": "Machine #35 Ownership Share - 5%"
+  },
+  {
+    "tokenId": 36,
+    "nftClawTokenId": 36,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 1709,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/36/image.png",
+    "name": "Machine #36 Ownership Share - 22%"
+  },
+  {
+    "tokenId": 37,
+    "nftClawTokenId": 37,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 2089,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/37/image.png",
+    "name": "Machine #37 Ownership Share - 12%"
+  },
+  {
+    "tokenId": 38,
+    "nftClawTokenId": 38,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 2888,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/38/image.png",
+    "name": "Machine #38 Ownership Share - 25%"
+  },
+  {
+    "tokenId": 39,
+    "nftClawTokenId": 39,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 4889,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/39/image.png",
+    "name": "Machine #39 Ownership Share - 16%"
+  },
+  {
+    "tokenId": 40,
+    "nftClawTokenId": 40,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 2865,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/40/image.png",
+    "name": "Machine #40 Ownership Share - 8%"
+  },
+  {
+    "tokenId": 41,
+    "nftClawTokenId": 41,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 4397,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/41/image.png",
+    "name": "Machine #41 Ownership Share - 25%"
+  },
+  {
+    "tokenId": 42,
+    "nftClawTokenId": 42,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 4196,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/42/image.png",
+    "name": "Machine #42 Ownership Share - 12%"
+  },
+  {
+    "tokenId": 43,
+    "nftClawTokenId": 43,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 3104,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/43/image.png",
+    "name": "Machine #43 Ownership Share - 12%"
+  },
+  {
+    "tokenId": 44,
+    "nftClawTokenId": 44,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 4628,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/44/image.png",
+    "name": "Machine #44 Ownership Share - 19%"
+  },
+  {
+    "tokenId": 45,
+    "nftClawTokenId": 45,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 4380,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/45/image.png",
+    "name": "Machine #45 Ownership Share - 24%"
+  },
+  {
+    "tokenId": 46,
+    "nftClawTokenId": 46,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 4502,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/46/image.png",
+    "name": "Machine #46 Ownership Share - 15%"
+  },
+  {
+    "tokenId": 47,
+    "nftClawTokenId": 47,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 3724,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/47/image.png",
+    "name": "Machine #47 Ownership Share - 20%"
+  },
+  {
+    "tokenId": 48,
+    "nftClawTokenId": 48,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 2650,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/48/image.png",
+    "name": "Machine #48 Ownership Share - 12%"
+  },
+  {
+    "tokenId": 49,
+    "nftClawTokenId": 49,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 2139,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/49/image.png",
+    "name": "Machine #49 Ownership Share - 8%"
+  },
+  {
+    "tokenId": 50,
+    "nftClawTokenId": 50,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 2536,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/50/image.png",
+    "name": "Machine #50 Ownership Share - 14%"
+  },
+  {
+    "tokenId": 51,
+    "nftClawTokenId": 51,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 4353,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/51/image.png",
+    "name": "Machine #51 Ownership Share - 5%"
+  },
+  {
+    "tokenId": 52,
+    "nftClawTokenId": 52,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 4271,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/52/image.png",
+    "name": "Machine #52 Ownership Share - 19%"
+  },
+  {
+    "tokenId": 53,
+    "nftClawTokenId": 53,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 4696,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/53/image.png",
+    "name": "Machine #53 Ownership Share - 10%"
+  },
+  {
+    "tokenId": 54,
+    "nftClawTokenId": 54,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 1627,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/54/image.png",
+    "name": "Machine #54 Ownership Share - 22%"
+  },
+  {
+    "tokenId": 55,
+    "nftClawTokenId": 55,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 3978,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/55/image.png",
+    "name": "Machine #55 Ownership Share - 14%"
+  },
+  {
+    "tokenId": 56,
+    "nftClawTokenId": 56,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 4690,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/56/image.png",
+    "name": "Machine #56 Ownership Share - 18%"
+  },
+  {
+    "tokenId": 57,
+    "nftClawTokenId": 57,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 4251,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/57/image.png",
+    "name": "Machine #57 Ownership Share - 7%"
+  },
+  {
+    "tokenId": 58,
+    "nftClawTokenId": 58,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 4454,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/58/image.png",
+    "name": "Machine #58 Ownership Share - 9%"
+  },
+  {
+    "tokenId": 59,
+    "nftClawTokenId": 59,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 1628,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/59/image.png",
+    "name": "Machine #59 Ownership Share - 7%"
+  },
+  {
+    "tokenId": 60,
+    "nftClawTokenId": 60,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 2767,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/60/image.png",
+    "name": "Machine #60 Ownership Share - 24%"
+  },
+  {
+    "tokenId": 61,
+    "nftClawTokenId": 61,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 3890,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/61/image.png",
+    "name": "Machine #61 Ownership Share - 9%"
+  },
+  {
+    "tokenId": 62,
+    "nftClawTokenId": 62,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 4232,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/62/image.png",
+    "name": "Machine #62 Ownership Share - 23%"
+  },
+  {
+    "tokenId": 63,
+    "nftClawTokenId": 63,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 4653,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/63/image.png",
+    "name": "Machine #63 Ownership Share - 13%"
+  },
+  {
+    "tokenId": 64,
+    "nftClawTokenId": 64,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 4900,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/64/image.png",
+    "name": "Machine #64 Ownership Share - 22%"
+  },
+  {
+    "tokenId": 65,
+    "nftClawTokenId": 65,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 3792,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/65/image.png",
+    "name": "Machine #65 Ownership Share - 17%"
+  },
+  {
+    "tokenId": 66,
+    "nftClawTokenId": 66,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 3847,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/66/image.png",
+    "name": "Machine #66 Ownership Share - 22%"
+  },
+  {
+    "tokenId": 67,
+    "nftClawTokenId": 67,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 1860,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/67/image.png",
+    "name": "Machine #67 Ownership Share - 6%"
+  },
+  {
+    "tokenId": 68,
+    "nftClawTokenId": 68,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 3240,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/68/image.png",
+    "name": "Machine #68 Ownership Share - 8%"
+  },
+  {
+    "tokenId": 69,
+    "nftClawTokenId": 69,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 4472,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/69/image.png",
+    "name": "Machine #69 Ownership Share - 24%"
+  },
+  {
+    "tokenId": 70,
+    "nftClawTokenId": 70,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 4069,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/70/image.png",
+    "name": "Machine #70 Ownership Share - 10%"
+  },
+  {
+    "tokenId": 71,
+    "nftClawTokenId": 71,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 3396,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/71/image.png",
+    "name": "Machine #71 Ownership Share - 24%"
+  },
+  {
+    "tokenId": 72,
+    "nftClawTokenId": 72,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 3438,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/72/image.png",
+    "name": "Machine #72 Ownership Share - 19%"
+  },
+  {
+    "tokenId": 73,
+    "nftClawTokenId": 73,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 3267,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/73/image.png",
+    "name": "Machine #73 Ownership Share - 23%"
+  },
+  {
+    "tokenId": 74,
+    "nftClawTokenId": 74,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 2438,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/74/image.png",
+    "name": "Machine #74 Ownership Share - 8%"
+  },
+  {
+    "tokenId": 75,
+    "nftClawTokenId": 75,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 1759,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/75/image.png",
+    "name": "Machine #75 Ownership Share - 13%"
+  },
+  {
+    "tokenId": 76,
+    "nftClawTokenId": 76,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 3447,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/76/image.png",
+    "name": "Machine #76 Ownership Share - 15%"
+  },
+  {
+    "tokenId": 77,
+    "nftClawTokenId": 77,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 2818,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/77/image.png",
+    "name": "Machine #77 Ownership Share - 20%"
+  },
+  {
+    "tokenId": 78,
+    "nftClawTokenId": 78,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 1696,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/78/image.png",
+    "name": "Machine #78 Ownership Share - 9%"
+  },
+  {
+    "tokenId": 79,
+    "nftClawTokenId": 79,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 3464,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/79/image.png",
+    "name": "Machine #79 Ownership Share - 23%"
+  },
+  {
+    "tokenId": 80,
+    "nftClawTokenId": 80,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 2391,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/80/image.png",
+    "name": "Machine #80 Ownership Share - 13%"
+  },
+  {
+    "tokenId": 81,
+    "nftClawTokenId": 81,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 2290,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/81/image.png",
+    "name": "Machine #81 Ownership Share - 5%"
+  },
+  {
+    "tokenId": 82,
+    "nftClawTokenId": 82,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 2598,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/82/image.png",
+    "name": "Machine #82 Ownership Share - 10%"
+  },
+  {
+    "tokenId": 83,
+    "nftClawTokenId": 83,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 4972,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/83/image.png",
+    "name": "Machine #83 Ownership Share - 17%"
+  },
+  {
+    "tokenId": 84,
+    "nftClawTokenId": 84,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 2335,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/84/image.png",
+    "name": "Machine #84 Ownership Share - 13%"
+  },
+  {
+    "tokenId": 85,
+    "nftClawTokenId": 85,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 3781,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/85/image.png",
+    "name": "Machine #85 Ownership Share - 25%"
+  },
+  {
+    "tokenId": 86,
+    "nftClawTokenId": 86,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 2143,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/86/image.png",
+    "name": "Machine #86 Ownership Share - 21%"
+  },
+  {
+    "tokenId": 87,
+    "nftClawTokenId": 87,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 4349,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/87/image.png",
+    "name": "Machine #87 Ownership Share - 14%"
+  },
+  {
+    "tokenId": 88,
+    "nftClawTokenId": 88,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 1589,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/88/image.png",
+    "name": "Machine #88 Ownership Share - 19%"
+  },
+  {
+    "tokenId": 89,
+    "nftClawTokenId": 89,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 4698,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/89/image.png",
+    "name": "Machine #89 Ownership Share - 24%"
+  },
+  {
+    "tokenId": 90,
+    "nftClawTokenId": 90,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 3847,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/90/image.png",
+    "name": "Machine #90 Ownership Share - 8%"
+  },
+  {
+    "tokenId": 91,
+    "nftClawTokenId": 91,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 1992,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/91/image.png",
+    "name": "Machine #91 Ownership Share - 11%"
+  },
+  {
+    "tokenId": 92,
+    "nftClawTokenId": 92,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 3004,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/92/image.png",
+    "name": "Machine #92 Ownership Share - 10%"
+  },
+  {
+    "tokenId": 93,
+    "nftClawTokenId": 93,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 2300,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/93/image.png",
+    "name": "Machine #93 Ownership Share - 21%"
+  },
+  {
+    "tokenId": 94,
+    "nftClawTokenId": 94,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 2654,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/94/image.png",
+    "name": "Machine #94 Ownership Share - 13%"
+  },
+  {
+    "tokenId": 95,
+    "nftClawTokenId": 95,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 3489,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/95/image.png",
+    "name": "Machine #95 Ownership Share - 17%"
+  },
+  {
+    "tokenId": 96,
+    "nftClawTokenId": 96,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 3127,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/96/image.png",
+    "name": "Machine #96 Ownership Share - 14%"
+  },
+  {
+    "tokenId": 97,
+    "nftClawTokenId": 97,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 3279,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/97/image.png",
+    "name": "Machine #97 Ownership Share - 18%"
+  },
+  {
+    "tokenId": 98,
+    "nftClawTokenId": 98,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 4110,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/98/image.png",
+    "name": "Machine #98 Ownership Share - 10%"
+  },
+  {
+    "tokenId": 99,
+    "nftClawTokenId": 99,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 3984,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/99/image.png",
+    "name": "Machine #99 Ownership Share - 23%"
+  },
+  {
+    "tokenId": 100,
+    "nftClawTokenId": 100,
+    "nftClawAddress": "0xClawAddressTBD",
+    "valueUSDT": 4247,
+    "imageURL": "https://api.clawhunters.com/metadata/nftclaw/100/image.png",
+    "name": "Machine #100 Ownership Share - 21%"
+  }
+]

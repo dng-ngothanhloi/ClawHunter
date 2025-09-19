@@ -1,0 +1,2 @@
+GRANT CREATE, DROP ON *.* TO 'appuser'@'%' IDENTIFIED BY 'apppass';
+FLUSH PRIVILEGES;

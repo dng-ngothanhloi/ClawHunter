@@ -1,0 +1,55 @@
+{
+  "name": "@clawhunters/api",
+  "version": "1.0.0",
+  "description": "Claw Hunters REST API - Serves live data from indexer database with claim endpoints",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "render-start": "node dist/index.js",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:deploy": "prisma migrate deploy",
+    "seed": "tsx src/scripts/seed_epoch.ts",
+    "demo": "tsx src/scripts/demo_postRevenue.ts",
+    "validate": "tsx src/scripts/validate_api.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.16.2",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.8.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "swagger-ui-express": "^5.0.0",
+    "winston": "^3.11.0",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "@types/compression": "^1.7.5",
+    "@types/cors": "^2.8.16",
+    "@types/express": "^4.17.21",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^20.9.0",
+    "@types/supertest": "^2.0.16",
+    "@types/swagger-ui-express": "^4.1.6",
+    "@types/yamljs": "^0.2.34",
+    "@vitest/coverage-v8": "^1.0.0",
+    "prisma": "^6.16.2",
+    "supertest": "^6.3.4",
+    "tsx": "^4.4.0",
+    "typescript": "^5.2.2",
+    "vitest": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "@clawhunters/indexer",
+  "version": "1.0.0",
+  "description": "Claw Hunters Event Indexer - Processes blockchain events and computes Merkle proofs",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "db:migrate": "prisma migrate dev",
+    "db:generate": "prisma generate",
+    "db:deploy": "prisma migrate deploy",
+    "db:reset": "prisma migrate reset --force",
+    "cli": "tsx src/cli.ts",
+    "ingest": "tsx src/cli.ts ingest",
+    "snapshot": "tsx src/cli.ts snapshot",
+    "merkle": "tsx src/cli.ts merkle",
+    "publish": "tsx src/cli.ts publish",
+    "run": "tsx src/cli.ts run"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.16.2",
+    "commander": "^11.1.0",
+    "cron": "^3.1.6",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.8.1",
+    "keccak": "^3.0.4",
+    "merkletreejs": "^0.3.11",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.0",
+    "@vitest/coverage-v8": "^1.0.0",
+    "prisma": "^6.16.2",
+    "tsx": "^4.4.0",
+    "typescript": "^5.2.2",
+    "vitest": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
