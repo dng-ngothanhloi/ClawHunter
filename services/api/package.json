@@ -1,6 +1,7 @@
 {
   "name": "@clawhunters/api",
   "version": "1.0.0",
+  "type": "module",
   "description": "Claw Hunters REST API - Serves live data from indexer database with claim endpoints",
   "main": "dist/index.js",
   "scripts": {
