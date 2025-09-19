@@ -90,21 +90,6 @@ envVarGroups:
       - key: SESSION_SECRET
         generateValue: true
 
-
-# Deployment Hooks
-preDeployCommand: |
-  echo "🚀 Starting Claw Hunters M6 Testing Deployment..."
-  echo "📋 Verifying PostgreSQL configuration..."
-  echo "🔗 Checking API service configuration..."
-  echo "✅ Pre-deployment checks complete"
-
-postDeployCommand: |
-  echo "🎉 Deployment complete!"
-  echo "🏥 Running health checks..."
-  echo "📊 API Health: $RENDER_EXTERNAL_URL/api/health"
-  echo "🌐 Web Frontend: $RENDER_EXTERNAL_URL"
-  echo "✅ M6 Testing deployment successful!"
-
 # External Cron Configuration Instructions
 # Configure external cron service (cron-job.org or UptimeRobot) to call:
 # POST https://clawhunters-api.onrender.com/jobs/index
