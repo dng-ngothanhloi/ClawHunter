@@ -60,7 +60,7 @@ services:
       - key: VITE_EXPLORER_URL
         value: https://devnet.adilchain-scan.io
       - key: VITE_CHAIN_ID
-        value: "123456"
+        value: 123456
     routes:
       - type: rewrite
         source: /*
