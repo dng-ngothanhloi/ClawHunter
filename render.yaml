@@ -7,11 +7,13 @@ services:
     name: clawhunters-api
     runtime: node
     plan: free
-    buildCommand: corepack enable && pnpm -C services/api install && pnpm -C services/api build
+    buildCommand: corepack enable && corepack prepare pnpm@9.6.0 --activate && pnpm -C services/api install --no-frozen-lockfile && pnpm -C services/api build
     startCommand: corepack enable && pnpm -C services/api render-start
     envVars:
       - key: NODE_ENV
         value: dev
+      - key: PNPM_CONFIG_FROZEN_LOCKFILE
+        value: "false"
       - key: NODE_VERSION
         value: 20.14.0
       - key: DATABASE_URL
@@ -45,6 +47,8 @@ services:
     runtime: static
     buildCommand: |
       corepack enable
+      corepack prepare pnpm@9.6.0 --activate
+      pnpm install --no-frozen-lockfile
       cd apps/web
       pnpm install
       pnpm build
@@ -57,6 +61,8 @@ services:
           property: host
       - key: NODE_VERSION
         value: 20.14.0
+      - key: PNPM_CONFIG_FROZEN_LOCKFILE
+        value: "false"
       - key: VITE_NETWORK_NAME
         value: AdilChain Devnet
       - key: VITE_RPC_URL
