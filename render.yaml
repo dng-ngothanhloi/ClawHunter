@@ -1,41 +1,22 @@
 # Render.com Deployment Configuration - M6 DevOps Testing
 # Claw Hunters GameFi Revenue Sharing System
 # Optimized for Free Tier Testing Deployment
-
 services:
-  # PostgreSQL Database (Free Tier)
-  - type: pserv
-    name: clawhunters-db
-    env: docker
-    dockerfilePath: ./db/Dockerfile
-    plan: free
-    envVars:
-      - key: POSTGRES_DB
-        value: clawhunters
-      - key: POSTGRES_USER
-        value: clawhunters
-      - key: POSTGRES_PASSWORD
-        generateValue: true
-    healthCheckPath: /health
-
   # REST API Service (M4) - Web Service with HTTP Jobs
   - type: web
     name: clawhunters-api
     env: node
     plan: free
-    buildCommand: pnpm -C services/api install && pnpm -C services/api build
-    startCommand: pnpm -C services/api render-start
+    envVarGroups: [blockchain, security]
+    buildCommand: corepack enable && pnpm -C services/api install && pnpm -C services/api build
+    startCommand: corepack enable && pnpm -C services/api render-start
     envVars:
       - key: NODE_ENV
         value: production
       - key: DATABASE_URL
-        fromDatabase:
-          name: clawhunters-db
-          property: connectionString
+        fromDatabase: { name: clawhunters-db, property: connectionString }
       - key: SHADOW_DATABASE_URL
-        fromDatabase:
-          name: clawhunters-db
-          property: connectionString
+        fromDatabase: { name: clawhunters-db, property: connectionString }
       - key: PORT
         value: 4000
       - key: ADL_RPC_URL
@@ -57,7 +38,9 @@ services:
   # Web Frontend (M5) - Static Site
   - type: static
     name: clawhunters-web
-    buildCommand: pnpm -C apps/web install && pnpm -C apps/web build
+    plan: free
+    envVarGroups: [blockchain]
+    buildCommand: corepack enable && pnpm -C apps/web install && pnpm -C apps/web build
     staticPublishPath: apps/web/dist
     envVars:
       - key: VITE_API_BASE
@@ -96,13 +79,14 @@ envVarGroups:
         value: https://devnet.adilchain-scan.io
       - key: CHAIN_ID
         value: 123456
-
   - name: security
     envVars:
       - key: JWT_SECRET
         generateValue: true
       - key: SESSION_SECRET
         generateValue: true
+
+
 
 # Deployment Hooks
 preDeployCommand: |
