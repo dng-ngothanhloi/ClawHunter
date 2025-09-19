@@ -1,0 +1,72 @@
+# OS & editors
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Node / Frontend
+node_modules/
+.npm/
+.pnpm-store/
+.yarn/
+.yarn/cache/
+.yarn/install-state.gz
+*.log
+dist/
+build/
+out/
+.eslintcache
+.stylelintcache
+.cache/
+.next/
+.nuxt/
+.temp/
+coverage/
+storybook-static/
+.cypress/
+.playwright/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.venv/
+.envrc
+
+# Go
+bin/
+*.test
+
+# Rust
+target/
+
+# Java
+*.class
+.gradle/
+build/
+
+# Solidity (Hardhat/Foundry)
+artifacts/
+cache/
+typechain/
+broadcast/
+
+# Package managers / bundlers
+.turbo/
+.rpt2_cache/
+rollup.cache
+vite.cache
+parcel-cache/
+
+# Misc
+*.tmp
+*.bak
+*.orig
+*.tgz
+
+# Env (do not commit secrets)
+.env.*
+!.env.example
