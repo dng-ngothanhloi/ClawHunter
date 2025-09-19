@@ -21,13 +21,13 @@ services:
           name: clawhunters-db
           property: connectionString
       - key: PORT
-        value: "4000"
+        value: 4000
       - key: ADL_RPC_URL
         value: https://devnet.adilchain-rpc.io
       - key: ADL_EXPLORER_URL
         value: https://devnet.adilchain-scan.io
       - key: CHAIN_ID
-        value: "123456"
+        value: 123456
       - key: JWT_SECRET
         generateValue: true
       - key: CORS_ORIGIN
@@ -81,7 +81,8 @@ envVarGroups:
       - key: ADL_EXPLORER_URL
         value: https://devnet.adilchain-scan.io
       - key: CHAIN_ID
-        value: "123456"
+        value: 123456
+
   - name: security
     envVars:
       - key: JWT_SECRET
