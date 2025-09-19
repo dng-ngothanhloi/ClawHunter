@@ -51,7 +51,7 @@ services:
           type: web
           name: clawhunters-web
           property: host
-    healthCheckPath: /api/health
+    healthCheckPath: /healthz
     autoDeploy: true
 
   - type: web
