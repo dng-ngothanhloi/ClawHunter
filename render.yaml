@@ -13,6 +13,7 @@ services:
       cd services/api
       pnpm install --no-frozen-lockfile
       pnpm run db:generate
+      pnpm run db:deploy
       pnpm run build
       
     startCommand: |
