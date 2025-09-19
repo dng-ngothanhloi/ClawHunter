@@ -2,10 +2,10 @@
   "name": "@clawhunters/api",
   "version": "1.0.0",
   "description": "Claw Hunters REST API - Serves live data from indexer database with claim endpoints",
-  "type": "module",
   "main": "dist/index.js",
   "scripts": {
     "dev": "tsx watch src/index.ts",
+    "build": "tsc",
     "build:dev": "tsc",
     "start": "node dist/index.js",
     "render-start": "node dist/index.js",

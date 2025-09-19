@@ -12,13 +12,14 @@ services:
       npm i -g pnpm@9.12.3
       cd services/api
       pnpm install --no-frozen-lockfile
-      pnpm build
-
+      pnpm run db:generate
+      pnpm run build
+      
     startCommand: |
       set -e
       npm i -g pnpm@9.12.3
       cd services/api
-      pnpm render-start
+      pnpm run render-start
 
     envVars:
       - key: NODE_ENV
