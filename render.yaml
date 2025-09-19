@@ -1,14 +1,15 @@
 # Render.com Deployment Configuration - M6 DevOps Testing
 # Claw Hunters GameFi Revenue Sharing System
 # Optimized for Free Tier Testing Deployment
+
 services:
   # REST API Service (M4) - Web Service with HTTP Jobs
   - type: web
     name: clawhunters-api
     env: node
     plan: free
-    buildCommand: pnpm -C services/api install && pnpm -C services/api build
-    startCommand: pnpm -C services/api render-start
+    buildCommand: corepack enable && pnpm -C services/api install && pnpm -C services/api build
+    startCommand: corepack enable && pnpm -C services/api render-start
     envVars:
       - key: NODE_ENV
         value: production
@@ -38,12 +39,12 @@ services:
     healthCheckPath: /api/health
     autoDeploy: true
 
-  # Web Frontend (M5) - Static Site
-  - type: web    
+  # Web Frontend (M5) - Static site (web env: static cũng OK)
+  - type: web
     name: clawhunters-web
     env: static
     plan: free
-    buildCommand: pnpm -C apps/web install && pnpm -C apps/web build
+    buildCommand: corepack enable && pnpm -C apps/web install && pnpm -C apps/web build
     staticPublishPath: apps/web/dist
     envVars:
       - key: VITE_API_BASE
@@ -51,27 +52,28 @@ services:
           type: web
           name: clawhunters-api
           property: host
-    - key: VITE_NETWORK_NAME
-      value: AdilChain Devnet
-    - key: VITE_RPC_URL
-      value: https://devnet.adilchain-rpc.io
-    - key: VITE_EXPLORER_URL
-      value: https://devnet.adilchain-scan.io
-    - key: VITE_CHAIN_ID
-      value: 123456
-  routes:
-    - type: rewrite
-      source: /*
-      destination: /index.html
-  autoDeploy: true
-# PostgreSQL Database Configuration
+      - key: VITE_NETWORK_NAME
+        value: AdilChain Devnet
+      - key: VITE_RPC_URL
+        value: https://devnet.adilchain-rpc.io
+      - key: VITE_EXPLORER_URL
+        value: https://devnet.adilchain-scan.io
+      - key: VITE_CHAIN_ID
+        value: 123456
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    autoDeploy: true
+
+# PostgreSQL Database (Managed)
 databases:
   - name: clawhunters-db
     databaseName: clawhunters
     user: clawhunters
     plan: free
 
-# Environment Groups for easier management
+# Environment Groups (tuỳ chọn gắn vào services bằng envVarGroups: [blockchain, security])
 envVarGroups:
   - name: blockchain
     envVars:
@@ -87,7 +89,6 @@ envVarGroups:
         generateValue: true
       - key: SESSION_SECRET
         generateValue: true
-
 
 
 # Deployment Hooks
