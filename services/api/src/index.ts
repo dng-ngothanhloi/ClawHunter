@@ -30,6 +30,7 @@ import nftownerRouter from './routes/nftowner.js';
 import stakingRouter from './routes/staking.js';
 import claimsRouter from './routes/claims.js';
 import jobsRouter from './routes/jobs.js';
+import metadataRouter from './routes/metadata.js';
 
 class ApiServer {
   private app: express.Application;
@@ -78,6 +79,9 @@ class ApiServer {
     // Jobs endpoint (no /api prefix for external cron access)
     this.app.use('/jobs', jobsRouter);
 
+    // Metadata endpoints (no /api prefix for NFT marketplace compatibility)
+    this.app.use('/metadata', metadataRouter);
+
     // API routes with /api prefix
     const apiRouter = express.Router();
     
@@ -99,6 +103,11 @@ class ApiServer {
         health: '/healthz',
         readiness: '/readyz',
         jobs: '/jobs/index',
+        metadata: {
+          owner: '/metadata/owner/{tokenId}',
+          claw: '/metadata/claw/{tokenId}',
+          ticket: '/metadata/ticket/{tokenId}',
+        },
         endpoints: {
           revenue: '/api/revenue',
           machines: '/api/machine',
