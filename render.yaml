@@ -7,8 +7,16 @@ services:
     name: clawhunters-api
     runtime: node
     plan: free
-    buildCommand: corepack enable && corepack prepare pnpm@9.6.0 --activate && pnpm -C services/api install --no-frozen-lockfile && pnpm -C services/api build
-    startCommand: corepack enable && pnpm -C services/api render-start
+    buildCommand: 
+      corepack enable
+      corepack prepare pnpm@9.6.0 --activate
+      cd services/api
+      pnpm -C install --no-frozen-lockfile
+      pnpm -C build
+    startCommand:
+      corepack enable
+      cd services/api
+      pnpm -C render-start
     envVars:
       - key: NODE_ENV
         value: dev
