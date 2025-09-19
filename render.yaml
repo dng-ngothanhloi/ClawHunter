@@ -3,10 +3,9 @@
 # Optimized for Free Tier Testing Deployment
 
 services:
-  # REST API Service (M4) - Web Service with HTTP Jobs
   - type: web
     name: clawhunters-api
-    env: node
+    runtime: node
     plan: free
     buildCommand: corepack enable && pnpm -C services/api install && pnpm -C services/api build
     startCommand: corepack enable && pnpm -C services/api render-start
@@ -22,13 +21,13 @@ services:
           name: clawhunters-db
           property: connectionString
       - key: PORT
-        value: 4000
+        value: "4000"
       - key: ADL_RPC_URL
         value: https://devnet.adilchain-rpc.io
       - key: ADL_EXPLORER_URL
         value: https://devnet.adilchain-scan.io
       - key: CHAIN_ID
-        value: 123456
+        value: "123456"
       - key: JWT_SECRET
         generateValue: true
       - key: CORS_ORIGIN
@@ -39,12 +38,14 @@ services:
     healthCheckPath: /api/health
     autoDeploy: true
 
-  # Web Frontend (M5) - Static site (web env: static cũng OK)
   - type: web
     name: clawhunters-web
-    env: static
-    plan: free
-    buildCommand: corepack enable && pnpm -C apps/web install && pnpm -C apps/web build
+    runtime: static
+    buildCommand: |
+      corepack enable
+      cd apps/web
+      pnpm install
+      pnpm build
     staticPublishPath: apps/web/dist
     envVars:
       - key: VITE_API_BASE
@@ -59,21 +60,19 @@ services:
       - key: VITE_EXPLORER_URL
         value: https://devnet.adilchain-scan.io
       - key: VITE_CHAIN_ID
-        value: 123456
+        value: "123456"
     routes:
       - type: rewrite
         source: /*
         destination: /index.html
     autoDeploy: true
 
-# PostgreSQL Database (Managed)
 databases:
   - name: clawhunters-db
     databaseName: clawhunters
     user: clawhunters
     plan: free
 
-# Environment Groups (tuỳ chọn gắn vào services bằng envVarGroups: [blockchain, security])
 envVarGroups:
   - name: blockchain
     envVars:
@@ -82,7 +81,7 @@ envVarGroups:
       - key: ADL_EXPLORER_URL
         value: https://devnet.adilchain-scan.io
       - key: CHAIN_ID
-        value: 123456
+        value: "123456"
   - name: security
     envVars:
       - key: JWT_SECRET
